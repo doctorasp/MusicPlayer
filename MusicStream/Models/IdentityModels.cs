@@ -20,6 +20,9 @@ namespace MusicStream.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Song> Songs { get; set; }
+        public DbSet<Playlist> Playlists { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
